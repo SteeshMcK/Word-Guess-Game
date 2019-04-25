@@ -66,6 +66,13 @@ body {
     float: right;
 }
 
+.gameSection p {
+    padding: 10px;
+}
+#wordInPlay {
+    padding: 20px;
+}
+
 footer {
     clear: both;
     width: 100%;
@@ -73,7 +80,6 @@ footer {
     position: fixed;
     left: 0;
     bottom: 0;
-    width: 100%;
 }
 
 footer h6 {
