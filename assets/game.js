@@ -17,8 +17,6 @@ var word = words[Math.floor(Math.random() * words.length)];
 console.log(word);
 
 /* Create an array of blanks for the chosen word. */
-
-
 var letterArray = [];
 var i;
 for (i = 0; i < word.length; i++) {
@@ -26,19 +24,27 @@ for (i = 0; i < word.length; i++) {
 }
 console.log(letterArray);
 
+/*string the blanks together */
+
 var letterString = letterArray.join(" ");
 document.getElementById("wordInPlay").innerHTML = letterString;
 
 console.log(letterString);
 
-/* remainingLetters is set to the length of the chosen word. This will help keep 
-track of how many letters are left to be guessed */
+/* Create an array of blanks for mistakes */
+var wrongGuess = [];
+console.log(wrongGuess);
+
+/* string the blanks together */
+
+var guessString= wrongGuess.join(" ");
+console.log(guessString)
+;
 /*remainingGuesses is set to 10, the number of guesses the player gets for each word */
 
-var remainingLetters = word.length;
-
 var remainingGuesses = 10;
-console.log(remainingLetters);
+
+/* Players guesses are recognized */
 
 document.onkeyup = function(event) {
     var choice = event.key;
@@ -46,19 +52,25 @@ document.onkeyup = function(event) {
     console.log(choice);
 
 /* Check to see if the choice is the same as any of the letters in the word */
-
-if (remainingLetters > 0) {
-    for (i = 0; i < remainingLetters; i++) {
-        if (remainingLetters[i] === choice)
-        {
+    for (i = 0; i < word.length; i++) {
+        if (word[i] === choice) {
             letterArray[i] = choice;
-        }
+        } 
     }
 
-    remainingGuesses--;
     document.getElementById("wordInPlay").innerHTML = letterArray.join(" ");
-    document.getElementById("guessesLeft").innerHTML = remainingGuesses;
-    
-}
+} 
+
+/*If choice is NOT the same as any of the letters in the word */
+
+if (choice !== word[i]) {
 
 }
+
+
+
+
+//if (remainingGuesses > 10) {
+
+
+
