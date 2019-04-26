@@ -43,20 +43,22 @@ console.log(remainingLetters);
 document.onkeyup = function(event) {
     var choice = event.key;
 
-while (remainingLetters > 0) {
-    for(var j = 0; j < letterString.length; j++) {
-        if(choice === word[j]) {
-            document.getElementById("wordInPlay").innerHTML = choice;
-            remainingLetters--;
-            } else {
-                document.getElementById("lettersGuessed").innerHTML = choice;
-                remainingGuesses--;
-                document.getElementById("guessesLeft").innerHTML = remainingGuesses;
-            }
-        } 
+    console.log(choice);
+
+/* Check to see if the choice is the same as any of the letters in the word */
+
+if (remainingLetters > 0) {
+    for (i = 0; i < remainingLetters; i++) {
+        if (remainingLetters[i] === choice)
+        {
+            letterArray[i] = choice;
+        }
     }
+
+    remainingGuesses--;
+    document.getElementById("wordInPlay").innerHTML = letterArray.join(" ");
+    document.getElementById("guessesLeft").innerHTML = remainingGuesses;
+    
 }
 
-
-
-    
+}
