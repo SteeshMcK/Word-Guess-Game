@@ -1,3 +1,9 @@
+var x = document.getElementById("laurasTheme"); 
+
+function playAudio() { 
+  x.play(); 
+} 
+
 /* Establish an array of words */
 
 var words = [
@@ -15,6 +21,7 @@ var words = [
 var word = words[Math.floor(Math.random() * words.length)];
 
 console.log(word);
+
 
 /* Create an array of blanks for the chosen word. */
 var letterArray = [];
@@ -38,11 +45,15 @@ console.log(wrongGuess);
 /* string the blanks together */
 
 var guessString= wrongGuess.join(" ");
-console.log(guessString)
-;
-/*remainingGuesses is set to 10, the number of guesses the player gets for each word */
+console.log(guessString);
+
+/*remainingGuesses is set to 10, the number of guesses the player gets for each word. 
+The length of the word chosen is set to wordLength. A variable (win) is established and 
+given the value of the length of the word*/
 
 var remainingGuesses = 10;
+var wordLength = word.length;
+var win = wordLength;
 
 /* Players guesses are recognized */
 
@@ -52,25 +63,41 @@ document.onkeyup = function(event) {
     console.log(choice);
 
 /* Check to see if the choice is the same as any of the letters in the word */
-    for (i = 0; i < word.length; i++) {
-        if (word[i] === choice) {
+
+while (remainingGuesses > 0) {
+
+for (i = 0; i < wordLength; i++) {
+        if (word[i] == choice) {
             letterArray[i] = choice;
         } 
+
+        document.getElementById("wordInPlay").innerHTML = letterArray.join(" ");
+}
+    remainingGuesses--;
+    document.getElementById("guessesLeft").innerHTML = remainingGuesses;
+
+/*Check to see if choice is NOT the same as any of the letters in the word */
+
+        if (word[i] != choice) {
+            wrongGuess[i] = choice;
+        }
+
+
+    document.getElementById("lettersGuessed").innerHTML = wrongGuess.join(" ");
+    remainingGuesses--;
+    document.getElementById("guessesLeft").innerHTML = remainingGuesses;
+
     }
-
-    document.getElementById("wordInPlay").innerHTML = letterArray.join(" ");
-} 
-
-/*If choice is NOT the same as any of the letters in the word */
-
-if (choice !== word[i]) {
-
 }
 
+//if (remainingGuesses > 10) {*/
 
 
+/*sound control */
 
-//if (remainingGuesses > 10) {
+var x = document.getElementById("laurasTheme"); 
 
-
+function playAudio() { 
+  x.play(); 
+} 
 
