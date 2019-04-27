@@ -41,6 +41,11 @@ body {
     padding-bottom: 20px;
 }
 
+.coffeePic, .bobPic, .cooperPic,
+.lauraPic, .piePic, .treesPic {
+    display: none;
+}
+
 .answerSection {
     background-color: #f4e6bf;
     color: #352a09;

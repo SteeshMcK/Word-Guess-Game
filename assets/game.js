@@ -10,7 +10,6 @@ var words = [
     "cooper",
     "laura",
     "trees",
-    "diane",
     "pie",
     "coffee",
     "bob"
@@ -55,6 +54,7 @@ var remainingGuesses = 10;
 var wordLength = word.length;
 var win = wordLength;
 
+
 /* Players guesses are recognized */
 
 document.onkeyup = function(event) {
@@ -64,21 +64,22 @@ document.onkeyup = function(event) {
 
 /* Check to see if the choice is the same as any of the letters in the word */
 
-while (remainingGuesses > 0) {
-
 for (i = 0; i < wordLength; i++) {
         if (word[i] == choice) {
             letterArray[i] = choice;
-        } 
-
-        document.getElementById("wordInPlay").innerHTML = letterArray.join(" ");
+        }
 }
-    remainingGuesses--;
-    document.getElementById("guessesLeft").innerHTML = remainingGuesses;
+
+document.getElementById("wordInPlay").innerHTML = letterArray.join(" ");    
+remainingGuesses--;
+document.getElementById("guessesLeft").innerHTML = remainingGuesses;
+
+
+}
 
 /*Check to see if choice is NOT the same as any of the letters in the word */
 
-        if (word[i] != choice) {
+       /* if (word[i] != choice) {
             wrongGuess[i] = choice;
         }
 
@@ -88,7 +89,6 @@ for (i = 0; i < wordLength; i++) {
     document.getElementById("guessesLeft").innerHTML = remainingGuesses;
 
     }
-}
 
 //if (remainingGuesses > 10) {*/
 
