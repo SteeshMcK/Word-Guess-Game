@@ -1,9 +1,3 @@
-var x = document.getElementById("laurasTheme"); 
-
-function playAudio() { 
-  x.play(); 
-} 
-
 /* Establish an array of words */
 
 var words = [
@@ -56,26 +50,27 @@ var win = wordLength;
 
 
 /* Players guesses are recognized */
-
 document.onkeyup = function(event) {
     var choice = event.key;
 
-    console.log(choice);
+    console.log("checking for word", word.includes(choice));
 
 /* Check to see if the choice is the same as any of the letters in the word */
 
-for (i = 0; i < wordLength; i++) {
-        if (word[i] == choice) {
-            letterArray[i] = choice;
-        }
+if (word.includes(choice) == true) {
+  letterArray[i] = choice;
+} else {
+  wrongGuess.push(choice); //push works for filling an empty array
+  remainingGuesses--;
 }
 
 document.getElementById("wordInPlay").innerHTML = letterArray.join(" ");    
-remainingGuesses--;
+document.getElementById("lettersGuessed").innerHTML = wrongGuess.join(" ");
 document.getElementById("guessesLeft").innerHTML = remainingGuesses;
 
 
 }
+
 
 /*Check to see if choice is NOT the same as any of the letters in the word */
 
