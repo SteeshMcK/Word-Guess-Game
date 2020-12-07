@@ -1,44 +1,68 @@
-/* Establish an array of words */
+// VARIABLES*******************************************************
+const words = [
+  "cooper",
+  "laura",
+  "trees",
+  "pie",
+  "coffee",
+  "bob"
+]
 
-var words = [
-    "cooper",
-    "laura",
-    "trees",
-    "pie",
-    "coffee",
-    "bob"
-];
+let word
+let letterArray
+let letterString
+let wrongGuess
+let guessString
+let remainingGuesses = 10;
+let wordLength = word.length;
+// let win = wordLength; Why do I need this??
 
-/* randomly choose a word from the array */
-
-var word = words[Math.floor(Math.random() * words.length)];
-
-console.log(word);
-
-
-/* Create an array of blanks for the chosen word. */
-var letterArray = [];
-var i;
-for (i = 0; i < word.length; i++) {
-    letterArray[i] = "_";
+// FUNCTIONS******************************************************
+const chooseWord = function() {
+  /* choose random word from the array */
+  word = words[Math.floor(Math.random() * words.length)]
+  return word
 }
-console.log(letterArray);
 
-/*string the blanks together */
+const numOfDashes = function(x) {
+  /* Create an array of blanks for the chosen word. */
+  letterArray = [];
+  for (let i = 0; i < word.length; i++) {
+      letterArray[i] = "_";
+  }
+  return letterArray
+}
 
-var letterString = letterArray.join(" ");
-document.getElementById("wordInPlay").innerHTML = letterString;
+const wordDashes = function(x) {
+  /*string the blanks together */
+  letterString = letterArray.join(" ");
+  document.getElementById("wordInPlay").innerHTML = letterString;
+  return letterString
+}
 
-console.log(letterString);
+const wrongGuessContainer = function() {
+  /* Create an array of blanks for mistakes */
+  let wrongGuess = []
+  console.log(wrongGuess)
+  /* string the blanks together */
+  guessString= wrongGuess.join(" ")
+  return guessString
+}
+ 
+// FUNCTION CALLS****************************************************************
+chooseWord()
+console.log(word)
 
-/* Create an array of blanks for mistakes */
-var wrongGuess = [];
-console.log(wrongGuess);
+numOfDashes(word)
+console.log(letterArray)
 
-/* string the blanks together */
+wordDashes(letterArray)
+console.log(letterString)
 
-var guessString= wrongGuess.join(" ");
-console.log(guessString);
+wrongGuessContainer()
+console.log(guessString)
+
+// WORK IN PROGRESS***************************************************************
 
 /*remainingGuesses is set to 10, the number of guesses the player gets for each word. 
 The length of the word chosen is set to wordLength. A variable (win) is established and 
