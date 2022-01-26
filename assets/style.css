@@ -1,20 +1,27 @@
+html {
+    background: url("images/woodPanel.JPG")  no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 body {
-    background-image: url("images/woodPanel.JPG");
     font-family: 'Special Elite', cursive;
 }
 
 * {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 /* Header styles */
 
-.headerContainer {
+.header-field {
     width: 900px;
     margin: auto;
 }
 
-.headerImage {
+.header-image {
     width: 900px;
 }
 
