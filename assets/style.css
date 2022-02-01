@@ -1,5 +1,13 @@
+/* CSS Variables */
+:root {
+    --main-light: #f4e6bf;
+    --main-dark: #352a09;
+    --font-specialElite: 'Special Elite', cursive;
+}
+
+/*  */
 html {
-    background: url("images/woodPanel.JPG")  no-repeat center center fixed; 
+    background: url("images/woodPanel.JPG") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -7,12 +15,12 @@ html {
 }
 
 body {
-    font-family: 'Special Elite', cursive;
+    font-family: var(--font-specialElite);
 }
 
-* {
-    /* box-sizing: border-box; */
-}
+/* * {
+    box-sizing: border-box;
+} */
 
 /* Header styles */
 
@@ -34,7 +42,7 @@ body {
 
 .answerText {
     font-size: 1.5em;
-    color: #f4e6bf;
+    color: var(--main-light);
     text-align: center;
     padding: 20px;
 }
@@ -54,8 +62,8 @@ body {
 }
 
 .answerSection {
-    background-color: #f4e6bf;
-    color: #352a09;
+    background-color: var(--main-light);
+    color: var(--main-dark);
     font-size: 1.25em;
     text-align: center;
     width: 400px;
@@ -69,8 +77,8 @@ body {
   }
 
 .gameSection {
-    background-color: #f4e6bf;
-    color: #352a09;
+    background-color: var(--main-light);
+    color: var(--main-dark);
     font-size: 1.25em;
     text-align: center;
     width: 400px;
@@ -96,7 +104,7 @@ footer {
 
 footer h6 {
     text-align: center;
-    color: #f4e6bf;
+    color: var(--main-light);
     font-size: 1.5em;
 }
 
