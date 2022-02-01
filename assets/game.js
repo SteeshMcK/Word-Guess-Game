@@ -14,14 +14,16 @@ let letterString
 let wrongGuess
 let guessString
 let remainingGuesses = 10;
-let wordLength = word.length;
+// let wordLength = word.length;
 // let win = wordLength; Why do I need this??
+const startGame = document.getElementById('main-start');
 
 // FUNCTIONS******************************************************
-const chooseWord = function() {
+const createWord = function() {
   /* choose random word from the array */
   word = words[Math.floor(Math.random() * words.length)]
-  return word
+  console.log (word)
+  numOfDashes(word);
 }
 
 const numOfDashes = function(x) {
@@ -30,13 +32,15 @@ const numOfDashes = function(x) {
   for (let i = 0; i < word.length; i++) {
       letterArray[i] = "_";
   }
-  return letterArray
+  console.log(letterArray);
+  wordDashes(letterArray);
 }
 
 const wordDashes = function(x) {
   /*string the blanks together */
-  letterString = letterArray.join(" ");
-  document.getElementById("wordInPlay").innerHTML = letterString;
+  letterString = letterArray.join(' ');
+  console.log(letterString);
+  document.getElementById('main-start').innerHTML = letterString;
   return letterString
 }
 
@@ -48,19 +52,23 @@ const wrongGuessContainer = function() {
   guessString= wrongGuess.join(" ")
   return guessString
 }
+
+// EVENT LISTENERS
+// start game
+document.addEventListener('keydown', createWord);
  
 // FUNCTION CALLS****************************************************************
-chooseWord()
-console.log(word)
+// chooseWord()
+// console.log(word)
 
-numOfDashes(word)
-console.log(letterArray)
+// numOfDashes(word)
+// console.log(letterArray)
 
-wordDashes(letterArray)
-console.log(letterString)
+// wordDashes(letterArray)
+// console.log(letterString)
 
-wrongGuessContainer()
-console.log(guessString)
+// wrongGuessContainer()
+// console.log(guessString)
 
 // WORK IN PROGRESS***************************************************************
 
@@ -68,32 +76,32 @@ console.log(guessString)
 The length of the word chosen is set to wordLength. A variable (win) is established and 
 given the value of the length of the word*/
 
-var remainingGuesses = 10;
-var wordLength = word.length;
-var win = wordLength;
+// var remainingGuesses = 10;
+// var wordLength = word.length;
+// var win = wordLength;
 
 
-/* Players guesses are recognized */
-document.onkeyup = function(event) {
-    var choice = event.key;
+// /* Players guesses are recognized */
+// document.onkeyup = function(event) {
+//     var choice = event.key;
 
-    console.log("checking for word", word.includes(choice));
+//     console.log("checking for word", word.includes(choice));
 
-/* Check to see if the choice is the same as any of the letters in the word */
+// /* Check to see if the choice is the same as any of the letters in the word */
 
-if (word.includes(choice) == true) {
-  letterArray[i] = choice;
-} else {
-  wrongGuess.push(choice); //push works for filling an empty array
-  remainingGuesses--;
-}
+// if (word.includes(choice) == true) {
+//   letterArray[i] = choice;
+// } else {
+//   wrongGuess.push(choice); //push works for filling an empty array
+//   remainingGuesses--;
+// }
 
-document.getElementById("wordInPlay").innerHTML = letterArray.join(" ");    
-document.getElementById("lettersGuessed").innerHTML = wrongGuess.join(" ");
-document.getElementById("guessesLeft").innerHTML = remainingGuesses;
+// document.getElementById("wordInPlay").innerHTML = letterArray.join(" ");    
+// document.getElementById("lettersGuessed").innerHTML = wrongGuess.join(" ");
+// document.getElementById("guessesLeft").innerHTML = remainingGuesses;
 
 
-}
+// }
 
 
 /*Check to see if choice is NOT the same as any of the letters in the word */
@@ -110,13 +118,3 @@ document.getElementById("guessesLeft").innerHTML = remainingGuesses;
     }
 
 //if (remainingGuesses > 10) {*/
-
-
-/*sound control */
-
-var x = document.getElementById("laurasTheme"); 
-
-function playAudio() { 
-  x.play(); 
-} 
-
