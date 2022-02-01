@@ -38,54 +38,33 @@ html {
 }
 
 .main-instructions {
-    font-size: 1.5em;
+    font-size: 2em;
     color: var(--main-light);
     text-align: center;
-    padding: 30px;
+    padding: 50px;
 }
 
-#winImage img {
-    padding: 20px;
-    width: 200px;
+.main-laptopview-image {
+    display: none;
 } 
-
-#winImage p {
-    padding-bottom: 20px;
-}
 
 .coffeePic, .bobPic, .cooperPic,
 .lauraPic, .piePic, .treesPic {
     display: none;
 }
 
-.answerSection {
+.main-game-stats {
     background-color: var(--main-light);
     color: var(--main-dark);
     font-size: 1.25em;
     text-align: center;
-    width: 400px;
-    float: left;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: auto;
 }
 
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-
-.gameSection {
-    background-color: var(--main-light);
-    color: var(--main-dark);
-    font-size: 1.25em;
-    text-align: center;
-    width: 400px;
-    padding-top: 20px;
-    float: right;
-}
-
-.gameSection p {
-    padding: 10px;
-}
 #wordInPlay {
     padding: 20px;
 }
@@ -121,29 +100,18 @@ footer h6 {
         margin: 0;
     }
 
-    .answerSection {
-        width: 50%;
-        margin: 0;
+    .main-laptopview-image {
+        display: inline-block;
     }
 
-    .clearfix::after {
-        content: "";
-        clear: both;
-        display: table;
-      }
-
-    .gameSection {
-        width: 50%;
-        height: 300px;
-        margin: 0;
-    }
-}
-
-@media only screen and (max-width: 400px) {
-
-    #winImage img {
-        height: auto;
-        width: 100%;
+    .main-laptopview-image img {
+        display: flex;
+        padding: 20px;
+        width: 200px;
+    } 
+    
+    #main-laptopview-image p {
+        padding-bottom: 20px;
     }
 
 }

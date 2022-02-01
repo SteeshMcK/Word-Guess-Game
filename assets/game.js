@@ -57,18 +57,6 @@ const wrongGuessContainer = function() {
 // start game
 document.addEventListener('keydown', createWord);
  
-// FUNCTION CALLS****************************************************************
-// chooseWord()
-// console.log(word)
-
-// numOfDashes(word)
-// console.log(letterArray)
-
-// wordDashes(letterArray)
-// console.log(letterString)
-
-// wrongGuessContainer()
-// console.log(guessString)
 
 // WORK IN PROGRESS***************************************************************
 

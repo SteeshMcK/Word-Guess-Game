@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -23,38 +24,29 @@
       <main>
         <div class="main-instructions" id="main-start">Press any key to start the game.</div>
         <div class="main-container">
-          <div class="answerSection clearfix">
+          <div class="main-answer-section clearfix">
             <section>
 
               <!--Images and sound-->
-                <span id="winImage">
-                  <div class="grtNrthrn">
+                  <div class="main-laptopview-image">
                     <img src="assets/images/greatNorthern.jpg" alt="Great Northern Hotel">
                     <p>Great Northern Hotel</p>
                     <br>
                     <p>Twin Peaks, WA</p>
                   </div>
-                </span>
             </section>    
           </div>
-          <div class="gameSection clearfix">
-            <section>
-              <p>Press any key to get started</p>
-              <br>
-              <span id="numberOfWins"></span>
-              <br>
-              <p>Current Word</p>
-              <span id="wordInPlay"></span>
-              <br>
-              <p>Number of guesses remaining</p>
-              <br>
-              <span id="guessesLeft"></span>
-              <br>
-              <p>Letters already guessed</p>
-              <br>
-              <span id="lettersGuessed"></span>
-            </section>
-          </div>  
+          <section class="main-game-stats">
+            <p>Number of guesses remaining</p>
+            <br>
+            <span id="guessesLeft"></span>
+            <br>
+            <p>Letters already guessed</p>
+            <br>
+            <span id="lettersGuessed"></span>
+            <br>
+            <span id="numberOfWins"></span>
+          </section>
         </div> 
       </main>
 
