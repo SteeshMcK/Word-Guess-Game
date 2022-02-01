@@ -1,11 +1,16 @@
 /* CSS Variables */
 :root {
+    --font-specialElite: 'Special Elite', cursive;
     --main-light: #f4e6bf;
     --main-dark: #352a09;
-    --font-specialElite: 'Special Elite', cursive;
 }
 
-/*  */
+/* Universal and Browser styles */
+* {
+    font-family: var(--font-specialElite);
+    box-sizing: border-box;
+}
+
 html {
     background: url("images/woodPanel.JPG") no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -14,23 +19,15 @@ html {
     background-size: cover;
 }
 
-body {
-    font-family: var(--font-specialElite);
-}
-
-/* * {
-    box-sizing: border-box;
-} */
-
 /* Header styles */
 
 .header-field {
-    width: 900px;
+    width: 100%;
     margin: auto;
 }
 
 .header-image {
-    width: 900px;
+    width: 100%;
 }
 
 /* Main styles */
@@ -108,14 +105,14 @@ footer h6 {
     font-size: 1.5em;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (min-width: 1024px) {
 
-    .headerContainer {
-        width: 100%;
-        margin: 0;
+    .header-field {
+        width: 900px;
+        margin: auto;
     }
 
-    .headerImage {
+    .header-image {
         width: 100%;
     }
 
