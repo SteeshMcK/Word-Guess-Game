@@ -37,7 +37,7 @@ html {
     margin: 20px auto;
 }
 
-.answerText {
+.main-instructions {
     font-size: 1.5em;
     color: var(--main-light);
     text-align: center;
