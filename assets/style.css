@@ -60,7 +60,6 @@ html {
     color: var(--main-dark);
     font-size: 1.25em;
     text-align: center;
-    display: block;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
@@ -108,22 +107,39 @@ footer h6 {
     }
 
     .main-container {
-        width: 100%;
-        margin: 20px auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        height: auto;
     }
 
-    .main-laptopview-image {
-        display: inline-block;
-    }
-
-    .main-laptopview-image img {
+    .main-container-flex {
         display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .main-leftbox-laptopView {
+        background-color: var(--main-light);
+        display: block;
+        width: 25%;
+    }
+
+    .main-leftbox-laptopView img {
+        display: block;
+        width: 300px;
         padding: 20px;
-        width: 200px;
+        margin: auto;
     } 
     
-    #main-laptopview-image p {
+    .main-leftbox-laptopView p {
         padding-bottom: 20px;
+        text-align: center;
+    }
+
+    .main-game-stats {
+        width: 25%;
     }
 
 }
