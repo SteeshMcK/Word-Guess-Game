@@ -33,18 +33,19 @@ html {
 /* Main styles */
 
 .main-container {
-    width: 900px;
+    width: 100%;
     margin: 20px auto;
 }
 
-.main-instructions {
+.main-playField-instructions {
+    height: 100px;
+    margin: 50px;
     font-size: 2em;
     color: var(--main-light);
     text-align: center;
-    padding: 50px;
 }
 
-.main-laptopview-image {
+.main-leftbox-laptopView {
     display: none;
 } 
 
@@ -95,9 +96,9 @@ footer h6 {
         width: 100%;
     }
 
-    .mainContainer {
+    .main-container {
         width: 100%;
-        margin: 0;
+        margin: 20px auto;
     }
 
     .main-laptopview-image {
