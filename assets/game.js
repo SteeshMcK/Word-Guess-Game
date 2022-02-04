@@ -5,7 +5,12 @@ const words = [
   "trees",
   "pie",
   "coffee",
-  "bob"
+  "bob", 
+  "tibet", 
+  "donuts",
+  "audrey",
+  "donna",
+  "james"
 ]
 
 let word

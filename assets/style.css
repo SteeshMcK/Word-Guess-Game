@@ -1,6 +1,7 @@
 /* CSS Variables */
 :root {
     --font-specialElite: 'Special Elite', cursive;
+    --font-standard: 2em;
     --main-light: #f4e6bf;
     --main-dark: #352a09;
 }
@@ -40,7 +41,7 @@ html {
 .main-playField-instructions {
     height: 100px;
     margin: 50px;
-    font-size: 2em;
+    font-size: var(--font-standard);
     color: var(--main-light);
     text-align: center;
 }
@@ -64,6 +65,16 @@ html {
     margin-right: auto;
     width: 100%;
     height: auto;
+}
+
+.main-game-stats-text {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.main-game-stats-text p {
+    padding: 10px;
 }
 
 #wordInPlay {
