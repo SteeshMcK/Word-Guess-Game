@@ -20,6 +20,8 @@ html {
     background-size: cover;
 }
 
+/* ++++++ MOBILE VIEW ++++++ */
+
 /* Header styles */
 
 .header-field {
@@ -80,6 +82,8 @@ html {
     padding: 20px;
 }
 
+/* FOOTER STYLES */
+
 footer {
     clear: both;
     width: 100%;
@@ -95,7 +99,7 @@ footer h6 {
     font-size: 1.5em;
 }
 
-@media only screen and (min-width: 1024px) {
+/* @media only screen and (min-width: 1024px) {
 
     .header-field {
         width: 900px;
@@ -142,4 +146,4 @@ footer h6 {
         width: 25%;
     }
 
-}
+} */
