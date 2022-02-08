@@ -48,7 +48,7 @@ html {
     text-align: center;
 }
 
-.main-leftbox-laptopView {
+.main-container-flex-image {
     display: none;
 } 
 
@@ -57,7 +57,7 @@ html {
     display: none;
 }
 
-.main-game-stats {
+.main-game-stats-textbox {
     background-color: var(--main-light);
     color: var(--main-dark);
     font-size: 1.25em;
@@ -66,12 +66,6 @@ html {
     margin-right: auto;
     width: 100%;
     height: auto;
-}
-
-.main-game-stats-textbox {
-    width: 80%;
-    margin: auto;
-    padding: 20px;
 }
 
 .main-game-stats-text {
@@ -103,7 +97,7 @@ footer h6 {
     text-align: center;
 }
 
-/* @media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
 
     .header-field {
         width: 900px;
@@ -118,8 +112,8 @@ footer h6 {
         display: block;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 50px;
         width: 80%;
-        height: auto;
     }
 
     .main-container-flex {
@@ -128,26 +122,32 @@ footer h6 {
         justify-content: space-around;
     }
 
-    .main-leftbox-laptopView {
+    .main-container-flex-image {
         background-color: var(--main-light);
         display: block;
-        width: 25%;
+        width: 30%;
     }
 
-    .main-leftbox-laptopView img {
+   .main-container-flex-image img {
         display: block;
-        width: 300px;
         padding: 20px;
         margin: auto;
     } 
     
-    .main-leftbox-laptopView p {
-        padding-bottom: 20px;
+    .main-container-flex-image p {
         text-align: center;
     }
 
-    .main-game-stats {
-        width: 25%;
+    .main-container-flex-image p:nth-of-type(2) {
+        padding-bottom: 20px;
     }
 
-} */
+    .main-container-flex-stats {
+        width: 30%;
+    }
+
+    .main-game-stats-textbox {
+        height: 100%;
+    }
+
+}
